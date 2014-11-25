@@ -2,26 +2,26 @@
    "manifest_version": 2,
    "background": {"page": "background.html"},
    "content_scripts": [ {
-      "css": [ 
-         "css/emotion_selector.css", 
+      "css": [
+         "css/emotion_selector.css",
          "css/ui.css",
          "css/onoffswitch.css"
       ],
-      "js": [ 
-      	"languages.js", 
+      "js": [
+      	"languages.js",
 
          "js/keycode.js",
          "js/jszip.js",
          "js/jszip-inflate.js",
-      	"js/jquery.min.js", 
+      	"js/jquery.min.js",
          "js/jquery-migrate-1.2.1.js",
-         "js/jquery.wait.js", 
-      	"js/jquery.livequery.js", 
-      	"js/jquery.event-filter.min.js", 
-      	"js/md5.js", 
+         "js/jquery.wait.js",
+      	"js/jquery.livequery.js",
+      	"js/jquery.event-filter.min.js",
+      	"js/md5.js",
       	"js/jquery.draggable.js",
-         "lib/underscore-min.js", 
-         "lib/nprogress.js", 
+         "lib/underscore-min.js",
+         "lib/nprogress.js",
 
          "local/loader.js",
 
@@ -40,7 +40,7 @@
          "extension/muteAll.js",
          "extension/packer.js",
          "local/portal.js"
-      	
+
       ],
       "matches": [ "http://www.plurk.com/*", "https://www.plurk.com/*" ]
    } ],

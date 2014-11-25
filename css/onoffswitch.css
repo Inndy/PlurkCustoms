@@ -36,11 +36,11 @@
     border: 2px solid #999999 !important; border-radius: 10px !important;
     position: absolute !important; top: 0 !important; bottom: 0 !important; right: 30px !important;
     -moz-transition: all 0.3s ease-in 0s !important; -webkit-transition: all 0.3s ease-in 0s !important;
-    -o-transition: all 0.3s ease-in 0s !important; transition: all 0.3s ease-in 0s !important; 
+    -o-transition: all 0.3s ease-in 0s !important; transition: all 0.3s ease-in 0s !important;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
     margin-left: 0 !important;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px !important; 
+    right: 0px !important;
 }

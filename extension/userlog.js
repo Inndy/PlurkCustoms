@@ -16,12 +16,12 @@ getLocal('GLOBAL', function(GLOBAL){
 			uid: GLOBAL.session_user.uid,
 			//action: 'start'
 		}
-		
+
 		if(GLOBAL.page_user.uid != GLOBAL.session_user.uid){
 			// Non-current user will not be tracked
 			return false;
 		}
-		
+
 		var user = {
 			// We log these public profile data for use of statistics
 			uid: GLOBAL.session_user.uid,
@@ -35,11 +35,11 @@ getLocal('GLOBAL', function(GLOBAL){
 			karma: GLOBAL.session_user.karma,
 			details: JSON.stringify(GLOBAL.page_user), // This is public data of user
 		}
-		
+
 		$.getJSON('http://plurkcustoms.sytes.net/?callback=?', {log: log, user: user}, function(res){
 			console.log(res);
 		});
-		
+
 	})
 });
 */

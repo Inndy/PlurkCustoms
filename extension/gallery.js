@@ -432,7 +432,7 @@ Gallery.prototype.showGalleryOnline = function(wrapper, loading) {
                     console.log('已移除', keyword, url);
                 });
             } else {
-                //self.useDefaultSmile(keyword); 
+                //self.useDefaultSmile(keyword);
                 self.operateEmoticonClick(emoticon, emoWrapper);
             }
 
@@ -1039,7 +1039,7 @@ Gallery.prototype.generateGalleryTab = function() {
     })
     createStyle(doc, "#emoticon_selecter.ondrag {opacity: 0.5;}");
     createStyle(doc, "#emoticon_selecter {-webkit-box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 5px 0px;-webkit-transition: opacity 0.2s linear;}");
-    //createStyle(doc, "#emoticon_selecter #emoticons_tabs {cursor: move ;}");	
+    //createStyle(doc, "#emoticon_selecter #emoticons_tabs {cursor: move ;}");
 }
 Gallery.prototype.createGalleryFilter = function(table, callback) {
 
@@ -1060,7 +1060,7 @@ Gallery.prototype.createGalleryFilter = function(table, callback) {
 
             //show all if empty
             if (val.length == 0) {
-                //restore 
+                //restore
                 tds.css({
                     'max-width': '80px',
                     'max-height': '80px',

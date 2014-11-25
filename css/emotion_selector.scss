@@ -15,7 +15,7 @@
 /*.input_holder textarea{
 	width:100% !important;
  }*/
- 
+
 img[src*='emos.plurk.com'].new{
 	-webkit-transition: 0.2s linear;
 	outline: 1px dashed #ccc;
@@ -36,11 +36,11 @@ img[src*='emos.plurk.com'].new:hover,
 span.emoticon_my_wrapper{}
 span.emoticon_my_wrapper:hover img.emoticon_my{cursor:pointer;filter:none!important;opacity:1 !important;}
 span.emoticon_my_wrapper:after{content:""!important; right:0;position:absolute;top:0}
-#timeline-add-emo-icon{display:none !important;} 
-.emo-tiny-adder{display:none !important;} 
+#timeline-add-emo-icon{display:none !important;}
+.emo-tiny-adder{display:none !important;}
 
-.candidate div{ 
-	vertical-align:middle; 
+.candidate div{
+	vertical-align:middle;
 	-webkit-transition: 0.2s linear;
 }
 .candidate{
@@ -75,18 +75,18 @@ span.emoticon_my_wrapper:after{content:""!important; right:0;position:absolute;t
 				background-position: center;
 				background-repeat: no-repeat;
 			}
-		}	
+		}
 		span{
 			width: 100%;
 		}
 		&:hover {
 			border-bottom: 4px solid #d55b1a;;
-		}	
+		}
 	}
 
 }
 
-	
+
 body{
 	#emotiland {
 		z-index: 12020;
@@ -109,7 +109,7 @@ body{
 			.tabWrapper{
 				//height: 280px;
 				overflow: hidden;;
-				
+
 			}
 
 			.loading{
@@ -119,9 +119,9 @@ body{
 				padding: 80px 0;
 				z-index: 999;
 				text-indent: -99999em;
-				text-align:center; 
+				text-align:center;
 				background-position: center;
-				background-image: url(chrome-extension://__MSG_@@extension_id__/images/loading-suqare-grey.gif); 
+				background-image: url(chrome-extension://__MSG_@@extension_id__/images/loading-suqare-grey.gif);
 				background-repeat: no-repeat;
 				background-size: 80px;
 			}
@@ -163,7 +163,7 @@ body{
 							max-width: 48px;
 							max-height: 48px;
 						}
-					}	//td				
+					}	//td
 				} //tr
 				&:hover{
 					td:hover {
@@ -188,7 +188,7 @@ body{
 			#emoticons_show {
 				height: 270px !important;
 				overflow: hidden;
-				table.plurkCustoms.gallery{	
+				table.plurkCustoms.gallery{
 					width: 100%;
 					tr {
 						display: inline !important;
@@ -208,7 +208,7 @@ body{
 						font-size: 1px;
 						margin-left: -1px;
 						opacity: 0;
-					}					
+					}
 				}
 
 			}

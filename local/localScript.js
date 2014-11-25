@@ -6,7 +6,7 @@ function markMuted(ids) {
     }
     var id = ids;
     console.log("Mute " + id);
-    //if(typeof $plurks['p' + id] != 'undefined') delete $plurks['p' + id];	
+    //if(typeof $plurks['p' + id] != 'undefined') delete $plurks['p' + id];
     if (typeof $plurks['p' + id] != 'undefined') {
         var p = $plurks['p' + id];
         p.obj.is_unread = 2;

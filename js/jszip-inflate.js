@@ -1,7 +1,7 @@
 /*
  * Port of a script by Masanao Izumo.
  *
- * Only changes : wrap all the variables in a function and add the 
+ * Only changes : wrap all the variables in a function and add the
  * main function to JSZip (DEFLATE compression method).
  * Everything else was written by M. Izumo.
  *

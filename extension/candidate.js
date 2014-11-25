@@ -300,7 +300,7 @@ GalleryCandidate.prototype.getDefaultSmiles = function(callback) {
 }
 
 GalleryCandidate.prototype.selectByKey = function(e, parent) {
-    //var candidateDiv = $(parent).find(".candidate"); 
+    //var candidateDiv = $(parent).find(".candidate");
     var candidateDiv = $(parent).siblings('.candidate');
     var key = Keycode.getValueByEvent(e);
     var self = this;

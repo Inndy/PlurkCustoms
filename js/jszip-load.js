@@ -524,7 +524,7 @@ Dual licenced under the MIT license or GPLv3. See LICENSE.markdown.
             this.checkSignature(JSZip.signature.CENTRAL_DIRECTORY_END);
             this.readBlockEndOfCentral();
 
-         
+
             /* extract from the zip spec :
                4)  If one of the fields in the end of central directory
                    record is too small to hold required data, the field

@@ -1,15 +1,15 @@
 /*if(! Element.prototype.hasDOMAttrModified ){
 	Element.prototype.hasDOMAttrModified = true;
 	Element.prototype._setAttribute = Element.prototype.setAttribute
-	Element.prototype.setAttribute = function(name, val) { 
-		var prev = this.getAttribute(name); 
+	Element.prototype.setAttribute = function(name, val) {
+		var prev = this.getAttribute(name);
 		this._setAttribute(name, val);
 		if(name.match(/^(class|id|href|src)$/)){
-			var e = document.createEvent("MutationEvents"); 
+			var e = document.createEvent("MutationEvents");
 			e.initMutationEvent("DOMAttrModified", true, true, null, prev, val, name, 2);
 			this.dispatchEvent(e);
 		}
-	}	
+	}
 }*/
 
 $.wait = function(selector, callback, continuous){
@@ -68,7 +68,7 @@ $.wait = function(selector, callback, continuous){
 			var obj = $(e.currentTarget);
 			var found = hasFound(obj);
 			if(found) return false;
-			clearAllListener();	
+			clearAllListener();
 			callback.call(obj, obj);
 		}
 		var attrListener = function(e){
@@ -76,18 +76,18 @@ $.wait = function(selector, callback, continuous){
 			var found = hasFound(obj);
 			if(found) return false;
 			clearAllListener();
-			callback.call(obj, obj);	
+			callback.call(obj, obj);
 		}
 		var clearAllListener = function(){
 			if(! continuous ) $(document).off('DOMNodeInserted', selector, listener);
 			if(! continuous ) $(document).off('DOMNodeInserted', childrenFinder);
 			//if(! continuous ) $(document).off('DOMSubtreeModified', selector, subtreeListener);
-			if(! continuous ) $(document).off('DOMAttrModified', selector, attrListener);			
+			if(! continuous ) $(document).off('DOMAttrModified', selector, attrListener);
 		}
-		$(document).on('DOMNodeInserted', selector, listener);	
-		$(document).on('DOMNodeInserted', childrenFinder);	
+		$(document).on('DOMNodeInserted', selector, listener);
+		$(document).on('DOMNodeInserted', childrenFinder);
 		//$(document).on('DOMSubtreeModified', selector, subtreeListener);
-		$(document).on('DOMAttrModified', selector, attrListener);	
+		$(document).on('DOMAttrModified', selector, attrListener);
 	}
 }
 /*
@@ -98,7 +98,7 @@ $.wait = function(selector, callback, loop){
 			var obj = $(selector);
 			if(! loop ) clearInterval(i);
 			callback.call(obj, obj);
-		} 
+		}
 	}, 50);
 }
 

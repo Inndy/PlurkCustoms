@@ -8,12 +8,12 @@
 		}
 		if(!arguments.callee.loading){
 			arguments.callee.loading = true;
-			var script = document.createElement('script'); 
-			script.type = 'text/javascript'; 
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
 			script.src = jQueryPath;
 			document.body.appendChild(script);
 		}
-		
+
 		var interval = setInterval(function(){
 			if(typeof jQuery == 'function'){
 				jQuery.noConflict();

@@ -52,7 +52,7 @@ chrome.extension.onRequest.addListener(
         /*if(request.isAlive){
 				console.log('request.isAlive', request);
 				loadEmotions(function(stored_emotions){
-					for(var s in stored_emotions){  
+					for(var s in stored_emotions){
 						if(request.keyword == stored_emotions[s].keyword && stored_emotions[s].alive == true){
 							console.log('sendResponse', true);
 							sendResponse(true);
@@ -203,7 +203,7 @@ function saveEmotions(emotions, type, callback) {
 
                 if (type == "merge" || type == "onlineMerge") {
 
-                    //merge	
+                    //merge
                     //if(type == "onlineMerge") for(var s in stored_emotions){  stored_emotions[s].alive = false;  }
 
                     for (var e in emotions) {
@@ -217,11 +217,11 @@ function saveEmotions(emotions, type, callback) {
                                 console.log('remove conflict: ', emotions[e].keyword, emotions[e].hash_id, stored_emotions[s].keyword, stored_emotions[s].hash_id);
                                 if (emotions[e].hash_id == stored_emotions[s].hash_id) { // 完全符合
                                     stored_emotions[s] = emotions[e];
-                                    //if(type == "onlineMerge") stored_emotions[s].alive = true; // 標記為在線上	
+                                    //if(type == "onlineMerge") stored_emotions[s].alive = true; // 標記為在線上
                                     //else stored_emotions[s].alive = (typeof emotions[e].alive == 'undefined') ? stored_emotions[s].alive : emotions[e].alive;
                                 } else { // 撞名的不同圖片
                                     emotions[e].keyword = resolveConflict(emotions[e].keyword, stored_emotions);
-                                    //emotions[e].alive = false; 
+                                    //emotions[e].alive = false;
                                     stored_emotions.push(emotions[e]);
 
                                 }
@@ -243,7 +243,7 @@ function saveEmotions(emotions, type, callback) {
 
                         // new added
                         console.log('new emotion merged:' + emotions[e].keyword);
-                        /*if(type == "onlineMerge") emotions[e].alive = true; 
+                        /*if(type == "onlineMerge") emotions[e].alive = true;
 						else emotions[e].alive = false; */
                         stored_emotions.push(emotions[e]);
                     }
