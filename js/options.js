@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   init();
+    init();
 });
 
 /* Javascript for stylebot options page */
@@ -45,18 +45,13 @@ function init() {
         if (el.type === 'checkbox') {
             if (value == true)
                 el.checked = true;
-        }
-
-        else if (tag === 'select' || el.type === 'hidden') {
+        } else if (tag === 'select' || el.type === 'hidden') {
             if (value != undefined)
                 el.value = value;
-        }
-
-        else if (el.type === 'radio') {
+        } else if (el.type === 'radio') {
             var len = $el.length;
             for (var i = 0; i < len; i++) {
-                if ($el.get(i).value == value)
-                {
+                if ($el.get(i).value == value) {
                     $el.get(i).checked = true;
                     return true;
                 }
@@ -64,7 +59,7 @@ function init() {
         }
 
     });
-    
+
     console.log(localStorage);
 
     //KeyCombo.init($('[name=shortcutKeyCharacter]').get(0), $('[name=shortcutKey]').get(0));
@@ -103,8 +98,7 @@ function fetchOptions() {
     $.each(options, function(option, value) {
         var dataStoreValue = localStorage['stylebot_option_' + option];
 
-        if (dataStoreValue != typeof undefined)
-        {
+        if (dataStoreValue != typeof undefined) {
             if (dataStoreValue === 'true' || dataStoreValue === 'false')
                 options[option] = (dataStoreValue === 'true');
             else
@@ -181,8 +175,10 @@ function attachListeners() {
 
 function translateOptionValue(name, value) {
     switch (name) {
-        case 'sync': return (value === 'true') ? true : false;
-        case 'shortcutKey': return $('[name=shortcutKey]').attr('value');
+        case 'sync':
+            return (value === 'true') ? true : false;
+        case 'shortcutKey':
+            return $('[name=shortcutKey]').attr('value');
     }
 
     return value;
@@ -201,7 +197,7 @@ function fillStyles() {
         // skip the global styles
         if (url === '*') continue;
         container.prepend(createStyleUI(url));
-        count ++;
+        count++;
     }
     setStyleCount(count);
 }
@@ -213,4 +209,3 @@ function getStyleCount() {
 function setStyleCount(val) {
     $('#style-count').text(val);
 }
-

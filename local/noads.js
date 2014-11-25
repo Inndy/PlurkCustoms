@@ -1,1 +1,3 @@
-$("#plurk_ads").livequery(function(){ $(this).remove(); })
+$("#plurk_ads").livequery(function() {
+    $(this).remove();
+})

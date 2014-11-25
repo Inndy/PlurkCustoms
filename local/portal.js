@@ -1,24 +1,22 @@
-
-
 var LANG = "zh_Hant";
 LANG = $("select[name=language] option[selected]").val();
 
 loadScript('languages.js');
 
-localScript(function(args){
-	window.jQueryPath		 	= args.jQueryPath;
-	window.plurkCustoms_key 	= args.plurkCustoms_key;
-	window.plurkCustoms_path 	= args.plurkCustoms_path;
-	//window.LANG					= args.LANG;
-	window.$extension = function(url){
-		return args.plurkCustoms_path + url;
-	}
+localScript(function(args) {
+    window.jQueryPath = args.jQueryPath;
+    window.plurkCustoms_key = args.plurkCustoms_key;
+    window.plurkCustoms_path = args.plurkCustoms_path;
+    //window.LANG					= args.LANG;
+    window.$extension = function(url) {
+        return args.plurkCustoms_path + url;
+    }
 
 }, {
-	jQueryPath 			: chrome.extension.getURL('jquery.min.js'),
-	plurkCustoms_key 	: chrome.extension.getURL('').replace('chrome-extension://', '').replace('/', ''),
-	plurkCustoms_path 	: chrome.extension.getURL(''),
-	LANG				: LANG,
+    jQueryPath: chrome.extension.getURL('jquery.min.js'),
+    plurkCustoms_key: chrome.extension.getURL('').replace('chrome-extension://', '').replace('/', ''),
+    plurkCustoms_path: chrome.extension.getURL(''),
+    LANG: LANG,
 });
 
 loadScript('local/loader.js');
@@ -47,13 +45,13 @@ loadStyle('lib/nprogress.css');
 loadScript('lib/nprogress.js');
 
 //時光機
-$.wait("#filter_tab span:contains((0))", function(element){
-	$(this).html('')
+$.wait("#filter_tab span:contains((0))", function(element) {
+    $(this).html('')
 }, true);
 
-$.wait("#filter_tab", function(element){
-	loadScript('js/timeMachine.js');
-	$("<a href='#' title='" + __('瀏覽以前的噗') + "' class='off_tab timeMachine' rel='timeMachine'>"+ __('時光機') +"</a>").click(function(){
-		localScript('PlurkCustoms.timeTravel();');
-	}).wrap('<li/>').appendTo(this);
+$.wait("#filter_tab", function(element) {
+    loadScript('js/timeMachine.js');
+    $("<a href='#' title='" + __('瀏覽以前的噗') + "' class='off_tab timeMachine' rel='timeMachine'>" + __('時光機') + "</a>").click(function() {
+        localScript('PlurkCustoms.timeTravel();');
+    }).wrap('<li/>').appendTo(this);
 });
